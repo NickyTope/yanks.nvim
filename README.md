@@ -1,0 +1,2 @@
+# yanks.nvim
+Yank history
