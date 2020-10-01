@@ -3,7 +3,7 @@ if exists('g:loaded_yanklist')
 endif
 
 let s:yanks = []
-let s:before = 0
+let s:max = get(g:, 'yanks_max', 25)
 
 function! yanks#list()
   if len(s:yanks) < 1
@@ -70,7 +70,7 @@ function! yanks#add()
   endif
   call filter(s:yanks, 'v:val != yank')
   call insert(s:yanks, yank)
-  if len(s:yanks) > 25
+  if len(s:yanks) > s:max
     call remove(s:yanks, -1)
   endif
 endfunction

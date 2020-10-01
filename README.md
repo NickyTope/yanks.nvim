@@ -34,3 +34,9 @@ The following are mapped when the menu is open:
 | Enter | put the selected yank                   |
 | dd    | remove the selected yank from the list  |
 | P     | Put the select yank (before the cursor) |
+
+## Config
+
+> Need to make more of what this does configurable...
+
+`let g:yanks_max = 10` -- Max number of yanks to remember (default 25)
