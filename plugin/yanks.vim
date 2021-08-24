@@ -91,8 +91,8 @@ augroup Yanks
   autocmd!
   autocmd TextYankPost * call yanks#add()
   autocmd VimLeave * call yanks#save()
-  hi link YankLine Search
-  hi link YankWord DiffAdd
+  hi link YankLine Structure
+  hi link YankWord String
 augroup END
 
 noremap <silent> <Plug>(Yanks) :call yanks#list()<cr>
